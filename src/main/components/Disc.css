@@ -1,0 +1,28 @@
+.disc{
+  text-align: center ;
+  margin: 0 2px;
+  border-radius: 3px;
+  width: 30px;
+  font-size: 0.7em;
+  color: white;
+}
+
+.Mat{
+  background-color: rgb(66, 126, 6);
+}
+
+.Fís{
+  background-color: rgb(32, 54, 196);
+}
+
+.Quí{
+  background-color: rgb(70, 4, 37);
+}
+
+.Por{
+  background-color: rgb(221, 26, 59);
+}
+
+.Red{
+  background-color: rgb(173, 77, 106);
+}
