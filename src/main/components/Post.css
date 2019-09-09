@@ -3,3 +3,46 @@
     padding: 20px; 
     margin: 2px;
   }
+
+  .Tag{
+    text-align: center ;
+    margin: 0 2px;
+    padding: 2px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    color: white;
+    height: 20px;
+  }
+
+  .TagAutor{
+    background-color: rgb(221, 200, 9);
+  }
+
+  .Serie{
+    background-color: rgb(122, 121, 124);
+    width: 20px;
+  }
+
+  .Data{
+    background-color: rgb(94, 68, 141);
+  }
+  .Matemática{
+    background-color: rgb(66, 126, 6);
+    
+  }
+
+  .Física{
+    background-color: rgb(32, 54, 196);
+  }
+
+  .Química{
+    background-color: rgb(70, 4, 37);
+  }
+
+  .Português{
+    background-color: rgb(221, 26, 59);
+  }
+
+  .Redação{
+    background-color: rgb(173, 77, 106);
+  }
