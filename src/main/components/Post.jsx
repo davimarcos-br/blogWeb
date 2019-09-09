@@ -7,6 +7,7 @@ import { firebaseDatabase } from '../Conn/firebaseConn'
 import './Post.css'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
+
 import Autor from './Autor'
 import Tag from './Tag'
 
@@ -22,7 +23,9 @@ class Post extends Component {
 
 
         componentWillMount() {
-                let query = firebaseDatabase.ref('post').limitToLast(10)
+                let query = firebaseDatabase.ref('post')
+                        .limitToLast(10)
+        
                 query.on('value', dataSnapshot => {
                         let items = []
                         dataSnapshot.forEach(childSnapshot => {
@@ -79,11 +82,15 @@ class Post extends Component {
         }
 
 
+ 
 
-
+        
+ 
         render() {
                 
-                return (<>{this.renderPosts()}</>)
+                return (<>
+                        
+                        {this.renderPosts()}</>)
         }
 }
 
