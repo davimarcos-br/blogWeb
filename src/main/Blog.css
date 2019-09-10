@@ -19,12 +19,9 @@
 
 }
 
-
-
-
-.btnToast {
+.btnclear{
   font-size: 0.8em;
-  
+  margin: 0 2px;
   border-radius: 5px;
   background-color: #e9ecef
 

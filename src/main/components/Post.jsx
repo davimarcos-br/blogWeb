@@ -1,16 +1,11 @@
 import React, { Component } from 'react'
 import { firebaseDatabase } from '../Conn/firebaseConn'
 
-
-
-
 import './Post.css'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 
-
 import Autor from './Autor'
 import Tag from './Tag'
-
 
 const initialState = { list: [] }
 
@@ -20,7 +15,6 @@ class Post extends Component {
         constructor(props){
                 super(props)
         }
-
 
         componentWillMount() {
                 let query = firebaseDatabase.ref('post')
@@ -37,18 +31,16 @@ class Post extends Component {
                 })
         }
 
+        filterAutor = lista =>  this.props.autor != null ?  lista.pautor == this.props.autor: true
         filterDisciplina = lista =>  this.props.disciplina != null ?  lista.pdisciplina == this.props.disciplina: true
-
         filterSerie = lista =>  this.props.serie != null ?  lista.pseries.includes(this.props.serie): true
-                
 
-        
-           
-        
         renderTag(autor, date, disciplina,series=[]){
                 return (
-                        <div className="d-flex flex-row border-top py-1 mt-auto  ">
-                        <button className="TagAutor Tag d-block d-sm-none px-2">{autor}</button> 
+                        <div className="d-flex flex-row border-top py-1 mt-auto">
+                        <button type="button"
+                                className="btn TagAutor Tag d-block d-sm-none px-2"
+                                onClick={e => this.props.pClick(autor)}>{autor}</button> 
                         <button 
                                 type="button" 
                                 className={disciplina + ' btn Tag'}
@@ -63,7 +55,7 @@ class Post extends Component {
         }
 
         renderPosts() {
-                return this.state.list.filter(this.filterSerie).filter(this.filterDisciplina).map(lista => {
+                return this.state.list.filter(this.filterAutor).filter(this.filterSerie).filter(this.filterDisciplina).map(lista => {
                         return (
                                 <Jumbotron key={lista.key} className="post d-flex flex-row  p-1">
                                         <div className="d-none d-sm-block">
@@ -80,14 +72,8 @@ class Post extends Component {
                         )
                 })
         }
-
-
- 
-
-        
- 
-        render() {
-                
+   
+        render() {              
                 return (<>
                         
                         {this.renderPosts()}</>)
@@ -95,5 +81,3 @@ class Post extends Component {
 }
 
 export default Post
-
-

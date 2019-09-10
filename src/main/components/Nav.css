@@ -1,0 +1,52 @@
+
+.nav{
+    background: #e9ecef
+}
+
+.header{
+    height: 200px;
+
+    background: rgba(248,181,0,1);
+    border-bottom: #2b2a2a solid 8px
+   
+}
+
+.boxGrid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+}
+
+.boxGrid-4{
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+}
+
+
+
+.btn-Turma{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    height: 50px;
+    background: #f0f1f2;
+}
+
+.btn-Turma:hover{
+    background: rgb(209, 209, 209);
+}
+
+
+.btn-Disc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    height: 25px;
+    background: #f0f1f2;
+}
+
