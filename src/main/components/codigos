@@ -1,0 +1,17 @@
+
+
+               let query = firebaseDatabase.ref('post')          
+                        .limitToLast(this.props.limit)
+                        
+                        
+        
+                query.on('value', dataSnapshot => {
+                        let items = []
+                        dataSnapshot
+                        .forEach(childSnapshot => {
+                                let item = childSnapshot.val()
+                                item['key'] = childSnapshot.key
+                                items.push(item)
+                        })
+                        this.setState({ list: items })
+                })
