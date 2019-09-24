@@ -1,9 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Provider} from 'react-redux'
+import store from './store'
+//import Posts from './components/Posts'
+import Blog from './Blog'
 
-class App extends Component {
-  render() {
-    return <div>TESTE TESTE</div>
-  }
+function App() {
+  return (
+    <Provider store={store}>
+      <div className="App">
+          <Blog />
+      </div>
+    </Provider>
+  )
 }
+  
 
 export default App
